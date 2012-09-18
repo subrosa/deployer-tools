@@ -18,9 +18,9 @@
   <url>${urlRoot}/deployer-tools</url>
 
   <scm>
-    <connection>scm:hg:https://hg.subrosagames.com/maven/deployer-tools</connection>
-    <developerConnection>scm:hg:https://hg.subrosagames.com/maven/deployer-tools</developerConnection>
-    <url>https://hg.subrosagames.com/maven/deployer-tools</url>
+	<connection>scm:hg:https://hg.subrosagames.com/maven/tools/deploy</connection>
+    <developerConnection>scm:hg:https://hg.subrosagames.com/maven/tools/deploy</developerConnection>
+	<url>https://hg.subrosagames.com/maven/tools/deploy</url>
   </scm>
   
   <build>
