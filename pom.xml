@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.subrosa.maven</groupId>
+    <artifactId>base-pom</artifactId>
+    <version>0.1</version>
+  </parent>
+  <groupId>com.subrosa.tools</groupId>
+  <artifactId>deployer-tools</artifactId>
+  <packaging>jar</packaging>
+  <version>0.1-SNAPSHOT</version>
+  <name>deployer-tools</name>
+  <description>
+    Build extension and tools to aid in the deployment of WAR projects.
+    As a build extension, includes various deployment-related Assembly Plugin
+    descriptors.  As a toolset, includes deployment scripts and related files.
+  </description>
+  <url>${urlRoot}/deployer-tools</url>
+
+  <scm>
+    <connection>scm:hg:https://hg.subrosagames.com/maven/deployer-tools</connection>
+    <developerConnection>scm:hg:https://hg.subrosagames.com/maven/deployer-tools</developerConnection>
+    <url>https://hg.subrosagames.com/maven/deployer-tools</url>
+  </scm>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>assemble-bundle</id>
+            <goals><goal>single</goal></goals>
+            <phase>package</phase>
+            <configuration>
+              <descriptors>
+                <descriptor>src/main/assemblies/bundle.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
