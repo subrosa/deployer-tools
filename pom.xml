@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.subrosa.maven</groupId>
     <artifactId>base-pom</artifactId>
-    <version>0.1</version>
+    <version>0.6</version>
   </parent>
   <groupId>com.subrosa.tools</groupId>
   <artifactId>deployer-tools</artifactId>
@@ -44,4 +44,11 @@
     </plugins>
   </build>
 
+  <distributionManagement>
+    <site>
+      <id>subrosa-site</id>
+      <name>Subrosa Maven Docs</name>
+      <url>${siteDeployRoot}/poms</url>
+    </site>
+  </distributionManagement>
 </project>
